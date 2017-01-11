@@ -14,12 +14,12 @@ void BananaPins::setupWiringPi() {
   mcp23017Setup (200, 0x21) ;
   int i;
 
-  for (i = 0 ; i < 18 ; ++i) {
+  for (i = 0 ; i < 14 ; ++i) {
       pinMode (100 + i, INPUT) ;
       pullUpDnControl (100 + i, PUD_DOWN) ;
-      }
+  }
   pinMode(115, OUTPUT);
-  digitalWrite(115, HIGH);    
+  digitalWrite(115, LOW);
 
   for (i = 0 ; i < 8 ; ++i) {
       pinMode (200 + i, OUTPUT) ;

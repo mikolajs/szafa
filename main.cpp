@@ -103,6 +103,7 @@ void checkIfEmpty(int des, BananaPins& bp){
       playlist.pop_front();
     } else if(isRolled) {
       bp.stopRoll();
+      isRolled = false;
     }
   }
 }
